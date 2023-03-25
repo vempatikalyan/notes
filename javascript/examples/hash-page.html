@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        height: 1000px;
+        border: 1px solid red;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main">Go to Main</a> | <a href="#footer">Go to Footer</a>
+    <div id="header">Header</div>
+    <div id="main">Main</div>
+    <div id="footer">Footer</div>
+    <script>
+      window.addEventListener('hashchange', (event) => {
+        console.log('Hashchange event', event);
+      });
+    </script>
+  </body>
+</html>

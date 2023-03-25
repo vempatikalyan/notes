@@ -1,0 +1,38 @@
+NODE_ENV possible values are development, test and production.
+
+We should not set NODE_ENV to a custom value. Depending on the tool, it might not even work properly if the value is not one of those.
+
+NODE_ENV variable is utilized by a lot of tools to change their behavior:
+    - When NODE_ENV is set to development, some tools may load additional code to show useful warnings, enable hot reloading and skip optimizations that are not necessary when you are developing the app.
+    - When the value is set to test, you may want to instrument your code for code coverage.
+    - When the value is set to production, some tools may optimize code paths, remove not utilized code, and perform optimizations where necessary.
+
+Use a different environment variable. It will be exclusively utilized by your app and can have any name, like DEPLOY_STAGE or APP_ENV. This value has to be changed depending on the deploy stage of the app, and will be combined with NODE_ENV:
+
+# local development
+DEPLOY_STAGE=development
+NODE_ENV=development
+
+# development deploy
+DEPLOY_STAGE=development
+NODE_ENV=production
+
+# staging deploy
+DEPLOY_STAGE=staging
+NODE_ENV=production
+
+# production deploy
+DEPLOY_STAGE=production
+NODE_ENV=production
+
+Why you should not use a custom value with NODE_ENV
+    - https://rafaelalmeidatk.com/blog/why-you-should-not-use-a-custom-value-with-node-env
+
+
+'vue-cli-service serve' use 'NODE_ENV=development'
+'vue-cli-service test:unit' use 'NODE_ENV=test'
+'vue-cli-service build' and 'vue-cli-service test:e2e' use 'NODE_ENV=production'
+
+To pick the correct environment variables(.env file) we can use '--mode' flag.
+vue-cli-service build --mode acceptance
+    - .env.acceptance file will be used
