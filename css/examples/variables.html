@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            :root {
+                --main-bg-color: #d3d3d3;
+                --main-text-color: #000000;
+                --main-padding: 15px;
+            }
+
+            :root[theme="dark"] {
+                --main-bg-color: #000000;
+                --main-text-color: #ffffff;
+            }
+
+            #div1 {
+                background-color: var(--main-bg-color);
+                color: var(--main-text-color);
+                padding: var(--main-padding);
+            }
+
+            #div2 {
+                background-color: var(--main-bg-color);
+                color: var(--main-text-color);
+                padding: var(--main-padding);
+            }
+        </style>
+    </head>
+    <body>
+        <h3><a href="./index.html">&lt;&lt; Back To Home</a></h3>
+        
+        <div id="div1">Div1 with some test content</div> <br>
+        <div id="div2">Div2 with some test content</div> <br>
+        <div>
+            Select theme:
+            <select onchange="changeTheme(event)">
+                <option value="">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+        <script>
+            function changeTheme(event) {
+                var theme = event.target.value;
+                if(theme == 'dark') {
+                    document.documentElement.setAttribute('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('theme');
+                }
+            }
+        </script>
+    </body>
+</html>
