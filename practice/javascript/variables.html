@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var message;
+        message ="Hello World!";
+        console.log(message);
+
+        let name = "variable declaration and assignment into a single line. ";
+        console.log(name);
+
+        let user = 'kalyan', age = '23', messages= 'hello';
+        message = "declare multiple variables in one line";
+        console.log(messages, message);
+
+        user = 'kalyan',
+        age = '23',
+        messages= 'hello';
+        message = "declare multiple variables in muliple line";
+        console.log(user,age,messages, message);
+
+        const pi = 3.14;
+        console.log(pi);
+
+        const dob = '28.10.1999';
+        let birth = dob;
+        birth = '28-10-1999';
+//         dob = '29.11.1999';  Uncaught TypeError: Assignment to constant variable.
+        console.log(birth);
+
+        /*UPPERCASE CONSTANTS*/
+        const COLOR_RED = "#F00";
+        let color = COLOR_RED;
+        console.log(color);
+    </script>
+</body>
+</html>
