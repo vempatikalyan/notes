@@ -1,0 +1,80 @@
+Git
+===
+git clone => clone git repo
+
+git status => check for any changes
+
+git add -A => stage all changes
+
+git add test.txt => stage test.txt
+
+git commit -m 'msg' => commit with msg
+
+git push => push changes to remote.
+
+git pull => take update from remote.
+
+git checkout -b branchName => to create specific branch.
+git push --set-upstream origin branchName => to push the local branch to remote.
+
+git checkout branchName => to checkout specific branch.
+
+git stash => stash all changes
+
+git stash list => to check all the stashes available in repo
+
+git stash save customMessage => stash changes with custom customMessage
+
+git stash apply stash@{2} => apply stash based on stash number
+
+git stash drop stash@{0} => delete stash.
+
+git remote show origin => show the origin url
+git config --get remote.origin.url => show the origin url
+
+Git Init:
+---------
+git init
+> Do some change in some file.
+git add -A
+git commit -m "First commit"
+git remote add origin https://github.com/nagarjuna-immadi/angular-todo.git
+git push -u origin master
+
+Git check all branches:
+-----------------------
+git branch -a => show your branches and add * to current branch
+git branch => show all local branches
+git branch -r => show all remote branches
+
+git checkout -b new-branch existing-branch => create and checkout new-branch from existing-branch. If we skip existing-branch, current branch will become the base for new branch.
+
+git push --set-upstream origin new-branch => new branch will be pushed to remote.
+
+Delete branch:
+--------------
+> git branch -d branchName ---> Delete local branch
+> git push --delete origin branchName ---> Delete remote branch
+
+Rename branch:
+--------------
+> git checkout <old_name>
+> git branch -m <new_name>
+> git push origin -u <new_name>
+> git push origin --delete <old_name>
+
+Push to another user repo:
+--------------------------
+git config --local credential.helper ""
+
+Git set upstream to forked repo:
+--------------------------------
+git remote -v => Display the remote url's configured
+git remote add upstream https://github.com/sitepoint-editors/angular-todo-app.git
+git fetch upstream => fetch all upstream branches to local
+git checkout master => checkout fork targed branch[master branch here] 
+git merge upstream/master => Merge targeted upstream branch to local branch 
+
+Git flow
+--------
+https://danielkummer.github.io/git-flow-cheatsheet/
