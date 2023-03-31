@@ -78,3 +78,6 @@ git merge upstream/master => Merge targeted upstream branch to local branch
 Git flow
 --------
 https://danielkummer.github.io/git-flow-cheatsheet/
+
+git reset HEAD^
+  - Revert last commit in local with out losing the changes
