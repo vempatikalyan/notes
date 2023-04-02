@@ -1,0 +1,13 @@
+Check below points in code review
+    - Is the code too complex
+        - Avoid writing multiple conditions in same function(10 or 15 conditions)
+        - One function should handle one action
+    - Avoid the old coding conventions and use new features. Ex: use ES6+ methods
+    - Passing all the quality gates? Sonar, Nexus and Fortify
+    - Minimum required unit test coverage added or not?
+    - Run it and check for bugs. Test like an end user. Expected functionality implemented or not?
+    - Run and Check for any deviations from designs, UI looking good.
+    - Code should be readable
+        - with meaningful names for variables, functions
+        - follow the naming conventions
+        - should be consistent with other code

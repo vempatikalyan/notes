@@ -1,0 +1,51 @@
+Google
+======
+https://developers.google.com/web
+    - Web fundamentals
+    - Web tools & updates
+
+https://github.com/GoogleChromeLabs
+    - Experimental projects from the Chrome team
+    - 'Comlink' web worker library is part of it
+
+https://developer.chrome.com/docs/
+    - Chrome ecosystem and javascript docs
+    - 'workbox' - service worker library docs are part of it
+
+Security
+========
+  - https://web.dev/secure/
+
+Performance
+===========
+  - https://web.dev/learn/
+    - Filter on Performance will give 3 collections
+      - Web Vitals, Metrics, Fast load times
+  - Filter on Lighthouse will give 5 collections of different kind of audits
+
+Other
+=====
+https://stateofjs.com/
+    - Survey of js lang, frameworks and tools
+    - We can know which is popular and people interested in.
+    - Can see list of all popular lang features, libraries, frameworks etc...
+
+https://intuit.github.io/auto/
+    - Streamline your release workflow and publish constantly!
+
+https://sentry.io/welcome/
+    - Tool for logging and tracing errors in application
+    - Suggested in vue js docs for Tracking runtime errors
+
+Splunk
+    - Logging tool and platform
+
+https://github.com/sudheerj
+    - javascript and vuejs interview questions
+
+https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
+    - Article on microtasks
+
+https://developer.mozilla.org/en-US/docs/Web/API
+    - List of Web APIs
+    - can do a poc app for each or all in one app

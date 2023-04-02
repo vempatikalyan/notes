@@ -1,0 +1,73 @@
+how to improve security?
+    - https://web.dev/secure/
+
+OWASP
+    - Go through Open Web Application Security Project (OWASP).
+
+Threat Modeling
+  - What is Threat Modeling?
+
+STRIDE Analysis
+  - What is STRIDE Analysis?
+
+Penetration Testing (Pentest)
+  - https://www.securify.nl/en/ is pentest partner for ABN
+
+Cross site scripting(XSS) / Script Injection attacks
+----------------------------------------------------
+Cross-site scripting (XSS) enables attackers to inject malicious code into web pages. Such code can then, for example, steal user data (in particular, login data) or perform actions to impersonate the user. 
+
+<img onerror="..."> and <a href="javascript:..."> allow to executed injected script. 
+
+Angular sanitizes the data bindings. Remove the script tags from templates etc..
+
+Prevention techniques
+- Never use non-trusted content as your component template. Don't directly accept script or html from user or third party.
+- In web frameworks interpolation and data bindings, the script is escaped.
+  <h1>{{ userProvidedString }}</h1>
+  If userProvidedString is '<script>alert("hi")</script>' then, that will be escaped to &lt;script&gt;alert(&quot;hi&quot;)&lt;/script&gt;
+- Don't believe all the third party libraries from internet.
+- Host file uploads in a separate domain
+- https://domgo.at/cxss/intro
+  - examples of XSS occuring
+  - examples of dangerous JavaScript APIs
+
+Cross-site request forgery(CSRF or XSRF)
+----------------------------------------
+- Must be mitigated on the server side as well. Both, client and server should co-operate and mitigate it.
+- Server sends a random value as cookie and client stores it. The subsequent calls should send this cookie to server for validation. This ensures that the request is generated from the same site.
+
+Angular's HttpClient has built-in support for the client-side half of this technique. It can automatically adds the cookie vaulue to sub subsequent calls.
+
+The cookie is a secret cookie which can be read by same site script.
+
+http-only cookie can not be read by same site script also. It will be transimiited in further requests.
+
+This technique is effective because all browsers implement the same origin policy. 
+
+Same Origin Policy
+------------------
+- The same-origin policy is a security policy enforced on client-side web applications (like web browsers) to prevent interactions between resources from different origins.
+- all browsers implement the same origin policy.
+- security mechanism that restricts how a document or script loaded from one origin can interact with a resource from another origin.
+- Two URLs have the same origin if the protocol, port (if specified), and host are the same for both.
+
+Cross-origin resource sharing(CORS)
+-----------------------------------
+- We should whitelist our origin url at server configuration, mostly cloud config these days.
+- If the origins are different, the browser will send a preflight(OPTIONS) request to the server and check the permissions of origin domain. It the origin domain is allowed, server will respond with "Access-Control-Allow-Origin" header with the origin domain. Then the actual request will be sent. Otherwise, the request will be failed.
+- Go through https://javascript.info/fetch-crossorigin
+
+Some general points for security
+--------------------------------
+- Avoid using vulnerable third party libraries
+- A vulnerability (sometimes called a security bug) is a type of bug that could be used for abuse.
+- It is important that we are aware of common vulnerabilities in order to mitigate them. It is just like minimizing other bugs by following common patterns and techniques.
+
+- Attack: Using the security bug and causing damage to application or system.
+
+- HTTPS: Encrypting data using HTTPS can prevent intercepting data while transimitting between parties.
+
+- Unfortunately, there is no single solution to make your application 100% secure. In practice, many security features and techniques are used in layers to prevent or further delay the attack (this is called defense in depth). If your application contains a form, you might check inputs in the browser, then on the server, and finally at the database; you would also use HTTPS to secure the data in transit.
+
+- 

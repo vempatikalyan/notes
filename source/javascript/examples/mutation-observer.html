@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    <h1>Mutation Observer Example</h1>
+    <div>
+      Select Language:
+      <!-- Assume: Select dropdown in one package. Ex: header or footer -->
+      <select
+        name="language"
+        id="language"
+        onchange="document.documentElement.setAttribute('lang', event.target.value)"
+      >
+        <option value="en" selected>English</option>
+        <option value="de">German</option>
+        <option value="fr">French</option>
+      </select>
+
+      <!-- Assume: This change listen is in another package and we need to write a generic code -->
+      <!-- Assume: Language changer can be anything. Select, EN | DE links. Finally, they update the lang attr -->
+      <script>
+        const languageObserver = new MutationObserver(mutationRecord => {
+            console.log("Language Changed to", mutationRecord[0].target.lang);
+            // We can invoke the translate service here to translate the page without reloading
+        });
+
+        languageObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeOldValue: true
+        });
+      </script>
+    </div>
+  </body>
+</html>

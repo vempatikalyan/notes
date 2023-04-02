@@ -1,0 +1,80 @@
+Achieving performance is a journery, not destination. Keep on learning and improving the application performance.
+
+how to improve Performance?
+  - https://web.dev/learn/
+    - Filter on Performance will give 3 collections
+      - Web Vitals, Metrics, Fast load times
+    - Filter on Lighthouse will give 5 collections of different kind of audits
+
+https://perfnow.nl/
+ - check once
+
+- In ABN, we had Non-Functional Requirements(NFR)
+  - A backend request should respond in 3 seconds, wait till then and show a loading message. Wait till 10 seconds and show can't load the requested data at this moment error message.
+
+1. Load script tags at the bottom with async attribute. So that the script execution thread doesn't block the page load.
+2. Use lazy loading to split the home screen build sanitize.
+3. Utilise the Treeshaking(Remove unnecessary imports in script files)
+4. Use build analyser tools and reduce the build size.
+5. Don't import the entire libraries, import only required parts.
+6. Don't handle large sets of data in browser. Bring chunks of records using backend paginators.
+7. Run lighthouse report and follow the suggestions to improve the performance
+
+Core Web Vitals
+---------------
+Largest Contentful Paint (LCP)
+First Input Delay (FID)
+Cumulative Layout Shift (CLS)
+
+web-vitals library
+------------------
+  - https://github.com/GoogleChrome/web-vitals
+  - library for collecting real time web vitals data
+  - Report tool: https://github.com/GoogleChromeLabs/web-vitals-report
+    - We can generate UI reports from collected data
+
+Lighthouse 
+----------
+- With lighthouse tool we can do below audits,
+  - Performance
+  - Accessibility
+  - SEO
+  - Best Practices
+  - Progressive Web App
+- Performance audits contains Metrics, Opportunities, Diagnostics and Passed audits
+- Opportunities: Opportunities section has detailed suggestions and documentation on how to implement them.
+- Diagnostics: Diagnostics section lists additional guidance that developers can explore to further improve their performance.
+- Lighthouse tracks below six performance metrics and generate report,
+  1. Largest Contentful Paint(LCP)
+    - Largest Contentful Paint marks the time at which the largest text or image is painted
+  2. Cumulative Layout Shift(CLS)
+    - Cumulative Layout Shift measures the movement of visible elements within the viewport.
+  3. Time to Interactive(TTI)
+    - Time to interactive is the amount of time it takes for the page to become fully interactive.
+  4. Total Blocking Time(TBT)
+    - Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds.
+  5. First Contentful Paint(FCP)
+    - First Contentful Paint marks the time at which the first text or image is painted.
+  6. Speed Index
+    - Speed Index shows how quickly the contents of a page are visibly populated.
+
+- Because Lighthouse is a lab tool and First Input Delay (FID) is a field metric, it reports Total Blocking Time instead.
+- Lighthouse CI
+  - https://github.com/GoogleChrome/lighthouse-ci
+  - Lighthouse-CI is a related tool that runs Lighthouse during project builds and deploys to assist with performance regression testing. 
+- Lighthouse user flows
+  - https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md
+  - https://web.dev/lighthouse-user-flows/
+- Lighthouse scoring calculator
+  - https://googlechrome.github.io/lighthouse/scorecalc/
+    - Helpful to understand how lighthouse calculte performance score
+
+The performance tab in Chrome's DevTools
+----------------------------------------
+- https://developer.chrome.com/docs/devtools/evaluate-performance/
+
+A three step workflow for ensuring your website's Core Web Vitals stay healthy
+  - Refer Image: img/web-vitals-workflow.png
+    - https://web.dev/vitals-tools/
+
+
