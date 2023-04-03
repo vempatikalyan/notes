@@ -313,7 +313,7 @@ var i = -3;
 while(i<3) { 
   i++; 
   if (i==0) continue; // It will skip 0 iteration and go to 1
-  console.log(i);
+  console.log(i); 
 } 
  
 Functions
@@ -362,36 +362,7 @@ greetUser(function(name) {
   console.log("Hi, "+name) 
 });
 
-Another example
----------------
-function add(a, b) {
-    return a+b;
-}
-
-function subtract(a, b) {
-    return a-b;
-}
-
-function division(a, b) {
-    return a/b;
-}
-
-function multiplication(a, b) {
-    return a*b;
-}
-
-function(a, b, operation) {
-    return operation(a, b);
-}
-
-function calculator(a, b, operation) {
-    return operation(a, b);
-}
-
-calculator(6, 3, add); // 9
-calculator(6, 3, subtract); // 3
-calculator(6, 3, division); // 2
-calculator(6, 3, multiplication); // 18
+Ex: ajax folder
 
 Self calling functions / Immediately invoked functions
 ------------------------------------------------------
@@ -600,9 +571,6 @@ window is the global object in javascript.
 
 var a = 10;
 Here 'a' will become property in window object. We can access it as 'window.a' OR just 'a'
-
-window object is available only in browser, not in node.js
-Ex: nodejs-vs-browserjs.js
 
 Object.keys() & Object.values() methods
 ---------------------------------------
@@ -1301,9 +1269,6 @@ Sites to Refer
 https://www.w3schools.com/
 
 http://javascript.info/
-
-Nodejs Basics:
-    - https://www.w3schools.com/nodejs/default.asp
 
 Pass by value VS Pass by reference
 ==================================
