@@ -8,35 +8,7 @@
 </head>
 <body>
     <script>
-        /* Global Variable*/
-        let userName = "Venkat";
-        function showMessageGlobal(){
-            console.log("Hello! " + userName);
-        }
-        showMessageGlobal();
-
-        /* Local Variable*/
-        function showMessage(){
-            let userName = "Kalyan";
-            console.log("Hello! " + userName);
-        }
-        showMessage();
-         /* The function has full access to the global variable. It can modify it as well.*/
-         let techName = "HTML";
-         function showTechName(){
-            //techName = "CSS";
-            let techName = "JS";
-            console.log("Learning " +techName);
-         }
-         console.log(techName);
-         showTechName();
-         console.log(techName); //the function did not access the outer variable
-         /* Returning Values*/
-         function sum(a,b){
-            return a+b;
-         }
-         let result = sum(5,6);
-         console.log("Sum is "+result);
+       
     </script>
 </body>
 </html>
