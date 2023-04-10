@@ -596,7 +596,7 @@ JSON: JavaScript Object Notation
 
 window Object
 =============
-window is the global object in javascript.
+window is the global object in browser javascript.
 
 var a = 10;
 Here 'a' will become property in window object. We can access it as 'window.a' OR just 'a'
@@ -646,8 +646,8 @@ function User(name) {
   };
 }
 
-var john = new User("John");
-var peter = new User("Peter");
+var user1 = new User("John");
+var user2 = new User("Peter");
 
 john.sayHi()
 peter.sayHi()
@@ -665,7 +665,7 @@ var obj = {
 obj.printName(); // this = obj
 
 Example2:
-var john = { 
+var user = { 
   firstName: "John" 
 }
 
@@ -673,9 +673,9 @@ function print() {
   console.log(this.firstName + ": hi!")
 }
 
-john.sayHi = print;
+user.sayHi = print;
 
-john.sayHi()  // this = john
+user.sayHi()  // this = john
 
 call, apply and bind methods
 ----------------------------
@@ -770,7 +770,7 @@ Observe complexObj.__proto__ , it should contain 'add' and 'subtract' methods in
 // Another kind of constructor function
 function veryComplexCalc(){
   this.modulas = function(){
-    console.log("Modulas is vaery complex"); 
+    console.log("Modulas is very complex"); 
   }
 }
 
@@ -1085,7 +1085,7 @@ Html -> Body -> Form -> Div -> P
 Targeting means traverse through the DOM and find Targeted element.
 
 Bubling: When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
-P -> Div -> Form
+P -> Div -> Form -> Body -> Html
 
 event.stopPropagation(); // To prevent propagation.
 
@@ -1253,6 +1253,7 @@ str.match(/widget/ig); // Returns an array with 2 elements. Case in-sensitive gl
 
 JavaScript Libraries
 ====================
+- axios
 - moment
 - lodash / underscore js
 - jquery
