@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: #7bbdfc;
+            margin-bottom: 40px;
+        }
+        .parent>div{
+            background-color: #f1f1f1;
+            width: 100px;
+            line-height: 75px;
+            font-size: 30px;
+            text-align: center;
+            margin: 10px 20px;
+        }
+        .container1{
+            display: flex;
+            flex-direction: column;
+        }
+        .container2{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .container3{
+            display: flex;
+            flex-direction: row;
+        }
+        .container4{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .container5{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container6{
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+        .container7{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .container8{
+            display: flex;
+            flex-flow: row-reverse wrap-reverse;
+        }
+        .container9{
+            display: flex;
+            justify-content: center;
+        }
+        .container10{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .container11{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .container12{
+            display: flex;
+            justify-content:space-around;
+        }
+        .container13{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container14{
+            display: flex;
+            align-items: center;
+            height: 300px;
+        }
+        .container15{
+            display: flex;
+            align-items: flex-start;
+            height: 300px;
+        }
+        .container16{
+            display: flex;
+            align-items: flex-end;
+            height: 300px;
+        }
+        .container17{
+            display: flex;
+            align-items: stretch;
+            height: 300px;
+        }
+        .container18{
+            display: flex;
+            align-items: baseline;
+        }
+        .container19{
+            display: flex;
+            align-content: center;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+        .container20{
+            display: flex;
+            align-content: flex-start;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+        .container21{
+            display: flex;
+            align-content: flex-end;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+        .container22{
+            display: flex;
+            align-content: space-around;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+        .container23{
+            display: flex;
+            align-content: space-between;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+        .container24{
+            display: flex;
+            align-content: stretch;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parent / Flexbox Properties</h1>
+    <h1>flex-Direction</h1>
+    <p><b>flex-direction:column</b></p>
+    <div class="parent container1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>flex-direction:column-reverse</b></p>
+    <div class="parent container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>flex-direction:row</b></p>
+    <div class="parent container3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>flex-direction:row-reverse</b></p>
+    <div class="parent container4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h1>flex-wrap</h1>
+    <p><b>flex-wrap:wrap</b></p>
+    <div class="parent container5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <p><b>flex-wrap:wrap-revrse</b></p>
+    <div class="parent container6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <p><b>flex-wrap:nowrap</b></p>
+    <div class="parent container7">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h1>flex-flow</h1>
+    <p><b>flex-flow:column wrap</b></p>
+    <p>flex-warp is the combination of flex-direction and flex-wrap</p>
+    <div class="parent container8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h1>justify-content</h1>
+    <p><b>justify-content:center</b></p>
+    <div class="parent container9">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>justify-content:start</b></p>
+    <div class="parent container10">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>justify-content:end</b></p>
+    <div class="parent container11">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>justify-content:space-around</b></p>
+    <div class="parent container12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>justify-content:space-between</b></p>
+    <div class="parent container13">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h1>align-items</h1>
+    <p><b>align-items:center</b></p>
+    <div class="parent container14">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>align-items:flex-start</b></p>
+    <div class="parent container15">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>align-items:flex-end</b></p>
+    <div class="parent container16">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>align-items:stretch</b></p>
+    <div class="parent container17">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p><b>align-items:baseline</b></p>
+    <div class="parent container18">
+        <div><small>1</small></div>
+        <div><p>2</p></div>
+        <div><h1>3</h1></div>
+    </div>
+    <h1>align-content</h1>
+    <p><b>align-content:center</b></p>
+    <div class="parent container19">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+    <p><b>align-content:start</b></p>
+    <div class="parent container20">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+    <p><b>align-content:end</b></p>
+    <div class="parent container21">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+    <p><b>align-content:space-around</b></p>
+    <div class="parent container22">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+    <p><b>align-content:space-between</b></p>
+    <div class="parent container23">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+    <p><b>align-content:stretch</b></p>
+    <div class="parent container24">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+</body>
+</html>
