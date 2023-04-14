@@ -2,8 +2,6 @@ List of all latest ES features
     - Babel plugins List page contains a plugin for each new concept
     - https://babeljs.io/docs/en/plugins-list
       - Effective way to learn new features
-      - My repo: https://github.com/nagarjuna-immadi/webpack-babel-config
-
 ---------------------------------------------------------------------    
 
 ES6 / ECMA Script 2015.
@@ -344,7 +342,7 @@ var smartPhonePrices = smartPhones.map(
   }
 );
 
-var smartPhonePrices = smartPhones.map(smartPhone => smartPhone.price);
+var smartPhonePrices = smartPhones.map(smartPhone=>smartPhone.price);
 
 2. No binding of this. "this" is not bound in arrow functions.
 

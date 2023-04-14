@@ -723,6 +723,7 @@
             <div>3</div>
         </div>
 
+        <h2>Use flex-grow to get equal width to all items(columns)</h2>
         <style>
             .flex-container38 {
                 display: flex;
@@ -739,6 +740,7 @@
             <div>2</div>
             <div>3</div>
             <div>4</div>
+            <div>5</div>
         </div>
         <div class="parent flex-container38">
             <div>1</div>

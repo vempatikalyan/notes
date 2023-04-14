@@ -37,7 +37,7 @@
 
     <form class="bubling-demo" onclick="alert('form')">FORM - Bubling Prevented
         <div onclick="alert('div')">DIV
-            <p onclick="alert('p');event.stopPropagation();event.target.innerHTML='Clicked on this element'">P</p>
+            <p onclick="alert('p');event.stopPropagation();">P</p>
         </div>
     </form>
 
